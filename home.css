@@ -147,19 +147,22 @@ body, nav {
 
 /* Styling for container-hours */
 .container-hours {
-    display: flex;
-    flex-wrap: nowrap; /* Ensure content does not wrap unless specified by the media query */
-    justify-content: space-between; /* Space out left and right sections */
-    align-items: center; /* Align items vertically */
-    padding: 2rem;
-    margin-top: 20px;
-    background-color: #ff000000; /* Light gray background */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    gap: 2rem;
+  display: flex;
+  flex-wrap: nowrap; /* Ensure content does not wrap unless specified by the media query */
+  justify-content: space-between; /* Space out left and right sections */
+  align-items: center; /* Align items vertically */
+  padding: 2rem;
+  margin-top: 20px;
+  
+  background-color: rgba(255, 255, 255, 0.9); /* Light gray background */
+  border-radius: 0px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  gap: 2rem;
 
-    background-color: rgba(255, 255, 255, 0.9);
-  }
+  max-width: 1000px;
+  margin: 3rem auto 1rem;
+}
+  
   
   /* Left and right sections */
   .container-hours .left, .container-hours .right {
@@ -189,6 +192,8 @@ body, nav {
     .container-hours {
       flex-direction: column; /* Stack left and right sections */
       text-align: center; /* Center-align content */
+      margin: 3rem 1rem;
+      border-radius: 10px;
     }
   
     .container-hours .left, .container-hours .right {
@@ -219,9 +224,11 @@ body, nav {
     color: white; /* Ensure text is visible over the background */
     border-radius: 0px; /* Optional: Rounds the container */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
-    margin-top: 39px; /* Space between sections */
+    margin-top: 36px; /* Space between sections */
     /* max-width: 1200px; */
     gap: 1rem;
+    border-bottom: 3px solid #4682b4;
+    border-top: 3px solid #4682b4;
   }
   
   .container1 .left {
