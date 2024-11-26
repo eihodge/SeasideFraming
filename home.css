@@ -164,7 +164,7 @@ body, nav {
   /* Left and right sections */
   .container-hours .left, .container-hours .right {
     flex: 1 1 50%; /* Equal width for left and right sections */
-    max-width: 50%; /* Prevents sections from exceeding 50% of the container */
+    max-width: 95%; /* Prevents sections from exceeding 50% of the container */
   }
   
   /* Right section styling (hours) */
@@ -219,7 +219,7 @@ body, nav {
     color: white; /* Ensure text is visible over the background */
     border-radius: 0px; /* Optional: Rounds the container */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
-    margin-top: 46px; /* Space between sections */
+    margin-top: 39px; /* Space between sections */
     /* max-width: 1200px; */
     gap: 1rem;
   }
