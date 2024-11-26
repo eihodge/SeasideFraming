@@ -17,11 +17,16 @@ body, nav {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 800px;
     gap: 2rem;
-    background-color: rgba(255, 255, 255, 0.9); /* Light coastal blue for differentiation */
+    background-color: rgba(255, 255, 255, 0.0); /* Light coastal blue for differentiation */
     border-radius: 8px; /* Adds slight rounding for aesthetics */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    
+
+   
+  
+  margin: 1rem auto 1rem;
+  
   }
 
   .container2 {
@@ -79,11 +84,7 @@ body, nav {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
-  /* Container2 Specific */
-  .container2 {
-    background-color: rgba(255, 255, 255, 0.9); /* Distinct light blue for Facebook section */
-  }
+
   
   .follow-us {
     flex: 1;
@@ -112,6 +113,7 @@ body, nav {
       flex-direction: column;
       text-align: center;
       margin: 2rem 1rem; /* Adjust for smaller screens */
+      background-color: rgba(255, 255, 255, 0.82);
     }
   
     .content {
@@ -135,7 +137,12 @@ body, nav {
   }
 
   .container1text {
-    color: yellow;
+    color: rgb(255, 255, 255);
+    font-family: 'Amatic SC';
+    background-color: rgba(0, 0, 0, 0.516); /* Choose a contrasting banner color */
+    padding: 10px; /* Add space around the text to make the banner noticeable */
+    border-radius: 5px; /* Optional: make the corners rounded */
+    display: inline-block; /* Ensure the banner wraps only the text */
   }
   
 
@@ -151,18 +158,26 @@ body, nav {
   flex-wrap: nowrap; /* Ensure content does not wrap unless specified by the media query */
   justify-content: space-between; /* Space out left and right sections */
   align-items: center; /* Align items vertically */
-  padding: 2rem;
   margin-top: 20px;
   
-  background-color: rgba(255, 255, 255, 0.9); /* Light gray background */
+  background-color: rgba(0, 0, 0, 0); /* Light gray background */
   border-radius: 0px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  gap: 2rem;
+  
+  
 
   max-width: 1000px;
-  margin: 3rem auto 1rem;
+  margin: 1rem auto 1rem;
+}
+.container-hours-outer {
+  background-color: rgba(255, 255, 255, 0.82);
 }
   
+/* .left {
+  background-color: red;
+}
+.right {
+  background-color: blue;
+} */
   
   /* Left and right sections */
   .container-hours .left, .container-hours .right {
@@ -192,8 +207,13 @@ body, nav {
     .container-hours {
       flex-direction: column; /* Stack left and right sections */
       text-align: center; /* Center-align content */
-      margin: 3rem 1rem;
+      margin: 1rem 1rem;
       border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.82);
+    }
+
+    .container-hours-outer {
+      background-color: rgba(0, 0, 0, 0);
     }
   
     .container-hours .left, .container-hours .right {
@@ -203,7 +223,6 @@ body, nav {
   
     .container-hours .right {
       padding-left: 0; /* Remove padding when stacked */
-      margin-top: 20px; /* Add spacing between stacked sections */
     }
 
   }
@@ -224,7 +243,7 @@ body, nav {
     color: white; /* Ensure text is visible over the background */
     border-radius: 0px; /* Optional: Rounds the container */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
-    margin-top: 36px; /* Space between sections */
+    margin-top: 48px; /* Space between sections */
     /* max-width: 1200px; */
     gap: 1rem;
     border-bottom: 3px solid #4682b4;

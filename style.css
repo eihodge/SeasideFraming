@@ -27,17 +27,18 @@ body {
   font-weight: 700;
   margin: 0.5rem;
   padding-left: 10px;
-  padding-top: 2px;
-  padding-bottom: 4px;
-  height: 40px;
+  
+ 
   color: #023e8a;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  font-family: 'Pacifico', cursive; /* Casual, beachy font for the title */
+  font-family: 'Amatic SC'; /* Casual, beachy font for the title */
+
+  font-size: 35px;
 }
 
 .website-title:hover {
   cursor: pointer;
-  color: #f9d71c; /* Sunny yellow */
+  
   transition: color 0.3s ease;
 }
 
@@ -49,16 +50,18 @@ body {
 
 .website-links ul li a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   color: #333;
   transition: color 0.3s;
+  font-family: 'Amatic SC';
+  font-size: 30px;
 }
 
 .website-links li {
   list-style: none;
   background-color: transparent;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  border-radius: 5px;
+  border-radius: none;
 }
 
 .website-links li a {
@@ -70,8 +73,8 @@ body {
 }
 
 .website-links li:hover {
-  background-color: #4682b4; /* Steel blue for hover */
-  transform: scale(1.05);
+  /* background-color: #4683b442; */
+  transform: scale(1.1);
 }
 
 .toggle-button .bar {
