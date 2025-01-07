@@ -5,6 +5,8 @@
     <script src="navbar.js" defer></script>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <script src="imageslider.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
         body { 
             margin: 0;
             padding: 0;
-            background-color: lightgray;
+            background-color: rgb(243, 238, 228);
             font-family: 'Open Sans';
         }
 
@@ -27,11 +29,11 @@
     <div class="banner">
         <div class="icons">
             <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
-                <img src="facebook.png">
+                <img src="/images/facebook.png">
             </a>
 
             <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
-                <img src="location.png">
+                <img src="/images/location.png">
             </a>
         </div>
         <div class="text">
@@ -42,7 +44,7 @@
 
     <nav class="navbar">
       <div class="website-title" onclick="location.href='/'">
-        <img class="website-img" src="logo2.png" alt="Seaside Framing Logo">
+        <img class="website-img" src="/images/logo2.png" alt="Seaside Framing Logo">
       </div>
       <a href="#" class="toggle-button" style="padding-top: 15px; padding-right: 10px;">
         <span class="bar"></span>
@@ -62,7 +64,39 @@
 
    <!-- End of boilerplate code -->
 
-    <h1>Welcome</h1>
-    <p>Drafts of contents of webpages have been added to blank html pages which are accessible via links above.</p>
+   <div class="slider-container">
+        <div class="slides" id="slides">
+            <div class="slide">
+                <img src="/images/frames.png" alt="Frame">
+                <div class="caption">
+                  <h1>Expert Custom Framing Since 2015</h1>
+                  <p>Showcasing your treasured items with care and precision in the heart of Oak Island, NC.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/images/storefront.png" alt="Custom Frame">
+                <div class="caption">
+                  <h1>Locally Owned and Operated</h1> 
+                  <p>All framing work is done in-store, providing unmatched quality and a personal touch for our Oak Island community.</p> 
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/images/shadowbox.png" alt="Shadow Box">
+                <div class="caption">
+                  <h1>Custom Framing for 2D and 3D Masterpieces</h1> 
+                  <p>From artwork to memorabilia, our frames and shadow boxes bring your vision to life.</p> 
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/images/matcutting.png" alt="Mat Cutting">
+                <div class="caption">
+                  <h1>Precision Glass and Mat Cutting</h1> 
+                  <p>Enhancing every piece with professional-grade materials and expert techniques.</p> 
+                </div>
+            </div>
+        </div>
+        <button class="arrow left" id="prev">&#8249;</button>
+        <button class="arrow right" id="next">&#8250;</button>
+    </div>
   </body>
 </html>
