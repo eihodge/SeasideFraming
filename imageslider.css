@@ -18,7 +18,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    /* transition: opacity 1s ease-in-out; */
 }
 
 .slide.active {
@@ -97,3 +97,9 @@
         font-size: 23px; /* Adjust the font size for smaller screens */
     }
 }
+
+.force-reflow {
+    width: calc(100% - 1px);
+}
+
+
