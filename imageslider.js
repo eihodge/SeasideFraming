@@ -21,14 +21,14 @@ function showSlide(index) {
 function nextSlide() {
     currentIndex = (currentIndex + 1) % totalSlides;
     showSlide(currentIndex);
-    resetInterval(6000); // Reset the interval here
+    resetInterval(); // Reset the interval here
     updateSliderContainerHeight(); // Ensure height is updated on slide change
 }
 
 function prevSlide() {
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     showSlide(currentIndex);
-    resetInterval(6000); // Reset the interval here
+    resetInterval(); // Reset the interval here
     updateSliderContainerHeight(); // Ensure height is updated on slide change
 }
 
@@ -50,30 +50,21 @@ function updateSliderContainerHeight() {
 
 // Call the function initially and whenever the slide changes
 document.addEventListener('DOMContentLoaded', function() {
-    // Force a reflow by adding and removing a class
-    document.body.classList.add('force-reflow');
-    setTimeout(function() {
-        document.body.classList.remove('force-reflow');
-    }, 100); // Adjust the delay as needed
-
     updateSliderContainerHeight();
-    resetInterval(6000); // Set the initial interval to 6000 milliseconds (6 seconds)
+    resetInterval(6000);
 });
-
 window.addEventListener('resize', updateSliderContainerHeight); // Update height on window resize
 
 document.getElementById('next').addEventListener('click', function() {
+    resetInterval(6000);
     nextSlide();
-    resetInterval(6000); // Reset the interval to 6000 milliseconds (6 seconds)
 });
 
 document.getElementById('prev').addEventListener('click', function() {
+    resetInterval(6000);
     prevSlide();
-    resetInterval(6000); // Reset the interval to 6000 milliseconds (6 seconds)
 });
 
 // Initialize the first slide
 showSlide(currentIndex);
 updateSliderContainerHeight();
-
-
