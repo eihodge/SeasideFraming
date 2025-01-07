@@ -1,0 +1,148 @@
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    
+}
+
+.website-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    padding-left: 0px;
+    padding-top: 0px;
+    height: 67px;
+
+}
+.website-title:hover {
+    cursor: pointer;
+}
+
+.website-img {
+    height: 65px;
+    margin-top: 1px;
+    margin-left: 3px;
+}
+
+.website-links {
+    height: 100%;
+}
+
+.website-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.website-links li {
+    list-style: none;
+    background-color: #00000000;
+    transition: background-color 0.2s ease;
+    padding-right: 5px;
+}
+
+.website-links li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(18, 18, 18);
+    padding: 1.2rem;
+}
+
+.website-links li:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(196, 196, 196);
+
+}
+
+.toggle-button {
+    
+    position: absolute;
+    top: 0.93rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    width: 30px; /* Set a specific width */
+    height: 24px; /* Set a specific height */
+    justify-content: space-between; /* Space out the bars */
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: all 0.3s ease;  /* Smooth transition for animation */
+}
+
+/* When the toggle-button has the 'open' class, transform the bars into an X */
+.toggle-button.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 10px);
+}
+
+.toggle-button.open .bar:nth-child(2) {
+    opacity: 0;  /* Hide the middle bar */
+}
+
+/* bottom left to top right (vertical, horizontal)*/
+.toggle-button.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -10px);
+}
+
+@media (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .website-links {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        width: 100%;
+    }
+
+    .website-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .website-links.active {
+        max-height: 500px;  /* Adjust this value based on your menu's height */
+    }
+
+    .website-links ul li {
+        text-align: center;
+    }
+
+    .website-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .website-links.active {
+        display: flex;
+    }
+
+    .website-img {
+        height: 58px;
+        margin-top: 4px;
+        margin-left: 3px;
+    }
+
+   
+}
+
+@media (max-width: 830px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    
+}

@@ -1,0 +1,48 @@
+.banner {
+    /* background-color: rgb(102, 153, 204); */
+    background-color: rgb(104, 138, 159);
+    color: white;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .icons {
+    display: flex;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+.banner .icons img {
+    width: 23px;
+    height: 23px;
+    margin: 10px;
+    filter: invert(1);
+    transition: transform 0.2s;
+}
+
+.banner .icons img:hover {
+    transform: scale(1.04);
+}
+
+.banner .text p {
+    margin: 0px;
+    margin-right: 40px;
+}
+
+@media (max-width: 600px) {
+    .banner .icons {
+        display: none;
+    }
+    .banner .text {
+        text-align: center;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .banner .text p {
+        margin-right: 0;
+        
+    }
+}
