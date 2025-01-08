@@ -1,0 +1,26 @@
+.fancy-button {
+    background-color: rgba(0, 0, 0, 0); /* White background */
+    border: 2px solid black; /* Black border */
+    color: black; /* Black text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 70px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
+  }
+  
+  .fancy-button:hover {
+    background-color: black; /* Black background on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.05);
+  }
+  
+  .fancy-button:active {
+    background-color: #333; /* Darker black background on click */
+    color: white; /* White text on click */
+    transform: scale(0.95); /* Slightly decrease size on click */
+  }

@@ -5,41 +5,66 @@
     <script src="navbar.js" defer></script>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="bottombar.css">
+    <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="imageslider.css">
     <script src="imageslider.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
 
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
     <link rel="icon" type="image/png" href="/websiteIcon.png">
 
     <style>
-        body { 
-            margin: 0;
-            padding: 0;
-            background-color: rgb(243, 238, 228);
-            font-family: 'Open Sans';
-        }
+      body { 
+          margin: 0;
+          padding: 0;
+          background-color: rgb(243, 238, 228);
+          font-family: 'Open Sans';
+      }
+
+      .intro-container {
+        max-width: 1250px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      
+
+      
+
+      
 
     </style>
   </head>
   <body>
     <div class="banner">
-        <div class="icons">
-            <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
-                <img src="/images/facebook.png">
-            </a>
+      <div class="icons">
+          <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
+              <img class="banner-img" src="/images/facebook.png">
+          </a>
 
-            <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
-                <img src="/images/location.png">
-            </a>
-        </div>
-        <div class="text">
-            <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
-            <p>(910) 250-1224 | SeasideFraming2@gmail.com</p>
-        </div>
+          <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
+              <img class="banner-img" src="/images/location.png">
+          </a>
+
+          <a href="mailto:SeasideFraming2@gmail.com" target="_blank">
+            <img class="banner-img" src="/images/mail.png">
+        </a>
+      </div>
+      <div class="text">
+          <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
+          <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
+
+          <p class="phone-info">
+            <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
+            (910) 250-1224
+        </p>
+      </div>
     </div>
 
     <nav class="navbar">
@@ -54,49 +79,134 @@
       <div class="website-links">
         <ul>
           <li><a href="#" onclick="location.href='/'">Home</a></li>
-          <li><a href="#" onclick="location.href='/about.html'">About Us</a></li>
+          <li><a href="#" onclick="location.href='/about.html'">About</a></li>
           <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
           <li><a href="#" onclick="location.href='/faq.html'">FAQ</a></li>
-          <li><a href="#" onclick="location.href='/contact.html'">Contact Us</a></li>
+          <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
         </ul>
       </div>
     </nav>
 
    <!-- End of boilerplate code -->
 
+   <!-- SLIDING IMAGES -->
    <div class="slider-container">
         <div class="slides" id="slides">
-            <div class="slide">
-                <img src="/images/frames.png" alt="Frame">
-                <div class="caption">
-                  <h1>Expert Custom Framing Since 2015</h1>
-                  <p>Showcasing your treasured items with care and precision in the heart of Oak Island, NC.</p>
-                </div>
+          <div class="slide">
+            <img src="/images/frames.jpeg" alt="Frame">
+            <div class="caption">
+              <h1 style="">Expert Custom Framing Since 2015</h1>
+              <p>Showcasing your treasured items with care and precision for over a decade.</p>
             </div>
-            <div class="slide">
-                <img src="/images/storefront.png" alt="Custom Frame">
-                <div class="caption">
-                  <h1>Locally Owned and Operated</h1> 
-                  <p>All framing work is done in-store, providing unmatched quality and a personal touch for our Oak Island community.</p> 
-                </div>
+          </div>
+          <div class="slide">
+            <img src="/images/storefront.jpeg" alt="Custom Frame">
+            <div class="caption">
+              <h1 style="">Locally Owned and Operated</h1> 
+              <p>All framing work is done in-store, providing unmatched quality and a personal touch for our Oak Island community.</p> 
             </div>
-            <div class="slide">
-                <img src="/images/shadowbox.png" alt="Shadow Box">
-                <div class="caption">
-                  <h1>Custom Framing for 2D and 3D Masterpieces</h1> 
-                  <p>From artwork to memorabilia, our frames and shadow boxes bring your vision to life.</p> 
-                </div>
+          </div>
+          <div class="slide">
+            <img src="/images/framedart.jpg" alt="Shadow Box">
+            <div class="caption">
+              <h1>Custom Framing for 2D and 3D Masterpieces</h1> 
+              <p>From artwork to memorabilia, our frames and shadow boxes bring your vision to life.</p> 
             </div>
-            <div class="slide">
-                <img src="/images/matcutting.png" alt="Mat Cutting">
-                <div class="caption">
-                  <h1>Precision Glass and Mat Cutting</h1> 
-                  <p>Enhancing every piece with professional-grade materials and expert techniques.</p> 
-                </div>
+          </div>
+          <div class="slide">
+            <img src="/images/matcutting.jpeg" alt="Mat Cutting">
+            <div class="caption">
+              <h1>Precision Glass and Mat Cutting</h1> 
+              <p>Enhancing every piece with professional-grade materials and expert techniques.</p> 
             </div>
+          </div>
         </div>
         <button class="arrow left" id="prev">&#8249;</button>
         <button class="arrow right" id="next">&#8250;</button>
     </div>
+
+    <!-- INTRO -->
+    <div class="intro-container" style="margin-bottom: 30px;  width: 85vw;">
+      <h1 style="font-family: Antic Didone;">Our Mission</h1>
+      <p>
+        At Seaside Framing, we bring over a decade of experience and a commitment to quality to every project. All our framing work is done in-store, ensuring exceptional results tailored to your needs. As a locally owned business, we take pride in offering personalized service, competitive pricing, and a welcoming atmosphere for all our customers.
+      </p>
+      <p>
+        A custom frame can transform your cherished items into stunning focal points for your home. By choosing Seaside Framing, you’re not only enhancing your space but also supporting a small, local business dedicated to the Oak Island community.
+      </p>
+      <p>
+        Contact us today to get started on a custom frame designed just for you!
+      </p>
+
+      <a href="contact.html">
+        <button class="fancy-button">Contact Us</button>
+      </a>
+    </div>
+
+    
+    <!-- SERVICES -->
+    <div class="services-container" style="margin-bottom: 15px;">
+      <a href="services.html" class="service-box">
+        <img src="/images/frames.jpeg" alt="Professional Custom Framing">
+        <div class="service-text">Professional Custom Framing</div>
+      </a>
+      <a href="services.html" class="service-box">
+        <img src="/images/glass.png" alt="Glass Cutting">
+        <div class="service-text">Glass Cutting</div>
+      </a>
+      <a href="services.html" class="service-box">
+        <img src="/images/example3.jpeg" alt="Mat Boards">
+        <div class="service-text">Mat Boards</div>
+      </a>
+      <a href="services.html" class="service-box">
+        <img src="/images/shadowbox.jpeg" alt="Shadow Boxes">
+        <div class="service-text">Shadow Boxes</div>
+      </a>
+    </div>
+
+
+
+    <!-- New dark gray container -->
+<div class="dark-gray-container-outer" style="margin-top: 40px;">
+<div class="dark-gray-container">
+  <div class="half-width" >
+    <div class="inner-half-width" >
+      <h3 style="font-weight: 400; padding-bottom: 23px;">PLAN YOUR VISIT</h3>
+
+      <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 10am-4pm</p>
+      <p style="margin-bottom: -12px;">Telephone: (910) 250-1224</p>
+      <p>Email: <a href="mailto:SeasideFraming2@gmail.com" target="_blank" class="light-gray-link" target="_blank" class="light-gray-link">SeasideFraming2@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="half-width" >
+    <div class="inner-half-width" >
+      <img src="/images/logo1.png" class="logo-bottom">
+
+      <p style="margin-bottom: -12px; font-size: 10px; color: rgb(164, 164, 164); text-align: center;">© 2025 Seaside Framing & Gallery NC</p>
+
+    </div>
+  </div>
+
+  <div class="half-width" >
+    <div class="inner-half-width" >
+      <h3 style="font-weight: 400; padding-bottom: 23px;">CONNECT WITH US</h3>
+
+      <p style="margin-bottom: -12px;">6012 E Oak Island Dr.            </p>
+      <p style="margin-bottom: -12px;">Oak Island, NC 28465</p>
+      <p><a href="https://www.google.com/maps/dir//Seaside+Framing+%26+Gallery,+6012+E+Oak+Island+Dr,+Oak+Island,+NC+28465/@33.9123106,-78.1034681,815m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x8900a94d66cd3de5:0xf46300bdb5356bd6!2m2!1d-78.1034677!2d33.9123121!3e0?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="light-gray-link">Directions</a></p>
+    </div>
+  </div>
+
+    
+  </div>
+
+</div></div>
+
+
+    
+    
+
+    
   </body>
 </html>

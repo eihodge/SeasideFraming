@@ -48,10 +48,32 @@ function updateSliderContainerHeight() {
     }
 }
 
+window.addEventListener('load', function () {
+    const sliderContainer = document.querySelector('.slider-container');
+    updateSliderContainerHeight();
+    sliderContainer.classList.add('show'); // Make visible after calculations
+    resetInterval(6000);
+});
+
 // Call the function initially and whenever the slide changes
 document.addEventListener('DOMContentLoaded', function() {
-    updateSliderContainerHeight();
-    resetInterval(6000);
+    const sliderContainer = document.querySelector('.slider-container');
+    const images = document.querySelectorAll('.slide img');
+    let loadedImages = 0;
+
+    images.forEach((img) => {
+        img.addEventListener('load', () => {
+            loadedImages++;
+            if (loadedImages === images.length) {
+                sliderContainer.style.visibility = 'hidden';
+                updateSliderContainerHeight();
+                sliderContainer.offsetHeight; // Trigger reflow
+                sliderContainer.style.visibility = 'visible';
+                sliderContainer.classList.add('show');
+                resetInterval(6000);
+            }
+        });
+    });
 });
 window.addEventListener('resize', updateSliderContainerHeight); // Update height on window resize
 
@@ -68,3 +90,5 @@ document.getElementById('prev').addEventListener('click', function() {
 // Initialize the first slide
 showSlide(currentIndex);
 updateSliderContainerHeight();
+
+

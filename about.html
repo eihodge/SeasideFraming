@@ -5,6 +5,7 @@
     <script src="navbar.js" defer></script>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="bottombar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
         body { 
             margin: 0;
             padding: 0;
-            background-color: lightgray;
+            background-color: rgb(243, 238, 228);
             font-family: 'Open Sans';
         }
 
@@ -42,20 +43,29 @@
   </head>
   <body>
     <div class="banner">
-        <div class="icons">
-            <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
-                <img src="/images/facebook.png">
-            </a>
+      <div class="icons">
+          <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
+              <img class="banner-img" src="/images/facebook.png">
+          </a>
 
-            <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
-                <img src="/images/location.png">
-            </a>
-        </div>
-        <div class="text">
-            <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
-            <p>(910) 250-1224 | SeasideFraming2@gmail.com</p>
-        </div>
-    </div>
+          <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
+              <img class="banner-img" src="/images/location.png">
+          </a>
+
+          <a href="mailto:SeasideFraming2@gmail.com" target="_blank">
+            <img class="banner-img" src="/images/mail.png">
+        </a>
+      </div>
+      <div class="text">
+          <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
+          <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
+
+          <p class="phone-info">
+            <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
+            (910) 250-1224
+        </p>
+      </div>
+  </div>
 
     <nav class="navbar">
       <div class="website-title" onclick="location.href='/'">
@@ -69,10 +79,10 @@
       <div class="website-links">
         <ul>
           <li><a href="#" onclick="location.href='/'">Home</a></li>
-          <li><a href="#" onclick="location.href='/about.html'">About Us</a></li>
+          <li><a href="#" onclick="location.href='/about.html'">About</a></li>
           <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
           <li><a href="#" onclick="location.href='/faq.html'">FAQ</a></li>
-          <li><a href="#" onclick="location.href='/contact.html'">Contact Us</a></li>
+          <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -97,7 +107,62 @@
             attention to detail. Whether it’s artwork, memorabilia, textiles, or oversized pieces, 
             Seaside Framing is here to bring your vision to life.
         </p>
+
+
+        <div>
+          <h1>Credits</h1>
+          <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Gregor Cresnar - Flaticon</a>
+          <br>
+          <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Hight Quality Icons - Flaticon</a>
+          <br>
+          <a href="https://www.flaticon.com/free-icons/pin" title="pin icons">Pin icons created by Freepik - Flaticon</a>
+          <br>
+          <a href="https://www.flaticon.com/free-icons/mail" title="mail icons">Mail icons created by Freepik - Flaticon</a>
+          
+        </div>
     </div>
+
+
+
+
+    <!-- New dark gray container -->
+    <div class="dark-gray-container-outer" style="margin-top: 40px;">
+      <div class="dark-gray-container">
+        <div class="half-width" >
+          <div class="inner-half-width" >
+            <h3 style="font-weight: 400; padding-bottom: 23px;">PLAN YOUR VISIT</h3>
+      
+            <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 10am-4pm</p>
+            <p style="margin-bottom: -12px;">Telephone: (910) 250-1224</p>
+            <p>Email: <a href="mailto:SeasideFraming2@gmail.com" target="_blank" class="light-gray-link" target="_blank" class="light-gray-link">SeasideFraming2@gmail.com</a></p>
+          </div>
+        </div>
+      
+        <div class="half-width" >
+          <div class="inner-half-width" >
+            <img src="/images/logo1.png" class="logo-bottom">
+      
+            <p style="margin-bottom: -12px; font-size: 10px; color: rgb(164, 164, 164); text-align: center;">© 2025 Seaside Framing & Gallery NC</p>
+      
+          </div>
+        </div>
+      
+        <div class="half-width" >
+          <div class="inner-half-width" >
+            <h3 style="font-weight: 400; padding-bottom: 23px;">CONNECT WITH US</h3>
+      
+            <p style="margin-bottom: -12px;">6012 E Oak Island Dr.            </p>
+            <p style="margin-bottom: -12px;">Oak Island, NC 28465</p>
+            <p><a href="https://www.google.com/maps/dir//Seaside+Framing+%26+Gallery,+6012+E+Oak+Island+Dr,+Oak+Island,+NC+28465/@33.9123106,-78.1034681,815m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x8900a94d66cd3de5:0xf46300bdb5356bd6!2m2!1d-78.1034677!2d33.9123121!3e0?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="light-gray-link">Directions</a></p>
+          </div>
+        </div>
+      
+          
+        </div>
+      
+      </div></div>
+
+    
 
 
   </body>

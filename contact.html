@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seaside Framing</title>
+    <script src="navbar.js" defer></script>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="bottombar.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <script src="imageslider.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <link rel="icon" type="image/png" href="/websiteIcon.png">
+
+    <style>
+      body { 
+          margin: 0;
+          padding: 0;
+          background-color: rgb(243, 238, 228);
+          font-family: 'Open Sans';
+      }
+
+      .intro-container {
+        max-width: 1250px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .see-us-container {
+        max-width: 1250px;
+        width: auto;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .contact-info {
+        display: flex;
+        width: 100%;
+      }
+
+      .contact-info-left, .contact-info-right {
+        flex-basis: 50%;
+        text-align: left;
+      }
+
+      .contact-info-right {
+        padding-left: 45px;
+      }
+
+      @media (max-width: 800px) {
+        .contact-info {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .contact-info-left, .contact-info-right {
+          flex-basis: 100%;
+          text-align: center;
+        }
+
+        .contact-info-right {
+          padding-left: 0px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="icons">
+          <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
+              <img class="banner-img" src="/images/facebook.png">
+          </a>
+
+          <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
+              <img class="banner-img" src="/images/location.png">
+          </a>
+
+          <a href="mailto:SeasideFraming2@gmail.com" target="_blank">
+            <img class="banner-img" src="/images/mail.png">
+        </a>
+      </div>
+      <div class="text">
+          <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
+          <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
+
+          <p class="phone-info">
+            <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
+            (910) 250-1224
+        </p>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="website-title" onclick="location.href='/'">
+        <img class="website-img" src="/images/logo2.png" alt="Seaside Framing Logo">
+      </div>
+      <a href="#" class="toggle-button" style="padding-top: 15px; padding-right: 10px;">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="website-links">
+        <ul>
+          <li><a href="#" onclick="location.href='/'">Home</a></li>
+          <li><a href="#" onclick="location.href='/about.html'">About</a></li>
+          <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
+          <li><a href="#" onclick="location.href='/faq.html'">FAQ</a></li>
+          <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+   <!-- End of boilerplate code -->
+
+
+
+    <!-- VISIT US -->
+    <div class="see-us-container " style="margin-bottom: 30px;  width: 85vw;">
+      <h1>Visit Seaside Framing</h1>
+      <div class="contact-info">
+        <div class="contact-info-left">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.1200153145824!2d-78.1034681!3d33.9123106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8900a94d66cd3de5%3A0xf46300bdb5356bd6!2sSeaside%20Framing%20%26%20Gallery!5e0!3m2!1sen!2sus!4v1736301252434!5m2!1sen!2sus" width="100%" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-info-right">
+          
+          <!-- <p>6012 E Oak Island Dr</p>
+          <p>Oak Island, NC 28465</p> -->
+          
+          <h3>Hours</h3>
+          <p>Sunday: CLOSED</p> 
+          <p>Monday: CLOSED</p>
+          <p>Tuesday: 10am - 4pm</p>
+          <p>Wednesday: 10am - 4pm</p>
+          <p>Thursday: 10am - 4pm</p>
+          <p>Friday: 10am - 4pm</p>
+          <p>Saturday: CLOSED</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- New dark gray container -->
+    <div class="dark-gray-container-outer" style="margin-top: 40px;">
+        <div class="dark-gray-container">
+          <div class="half-width" >
+            <div class="inner-half-width" >
+              <h3 style="font-weight: 400; padding-bottom: 23px;">PLAN YOUR VISIT</h3>
+        
+              <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 10am-4pm</p>
+              <p style="margin-bottom: -12px;">Telephone: (910) 250-1224</p>
+              <p>Email: <a href="mailto:SeasideFraming2@gmail.com" target="_blank" class="light-gray-link" target="_blank" class="light-gray-link">SeasideFraming2@gmail.com</a></p>
+            </div>
+          </div>
+        
+          <div class="half-width" >
+            <div class="inner-half-width" >
+              <img src="/images/logo1.png" class="logo-bottom">
+        
+              <p style="margin-bottom: -12px; font-size: 10px; color: rgb(164, 164, 164); text-align: center;">© 2025 Seaside Framing & Gallery NC</p>
+        
+            </div>
+          </div>
+        
+          <div class="half-width" >
+            <div class="inner-half-width" >
+              <h3 style="font-weight: 400; padding-bottom: 23px;">CONNECT WITH US</h3>
+        
+              <p style="margin-bottom: -12px;">6012 E Oak Island Dr.            </p>
+              <p style="margin-bottom: -12px;">Oak Island, NC 28465</p>
+              <p><a href="https://www.google.com/maps/dir//Seaside+Framing+%26+Gallery,+6012+E+Oak+Island+Dr,+Oak+Island,+NC+28465/@33.9123106,-78.1034681,815m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x8900a94d66cd3de5:0xf46300bdb5356bd6!2m2!1d-78.1034677!2d33.9123121!3e0?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="light-gray-link">Directions</a></p>
+            </div>
+          </div>
+        
+            
+          </div>
+        
+        </div></div>
+    
+  </body>
+</html>

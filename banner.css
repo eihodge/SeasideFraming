@@ -1,20 +1,22 @@
 .banner {
-    /* background-color: rgb(102, 153, 204); */
-    background-color: rgb(104, 138, 159);
-    color: white;
-    padding: 1px;
+    background-color: rgb(105, 166, 158);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribute space between items */
     align-items: center;
+    width: 100%;
+    position: relative; /* Ensure the banner is the reference for absolute positioning */
 }
 
-.banner .icons {
+.icons {
     display: flex;
     gap: 5px;
-    margin-left: 15px;
+    position: absolute;
+    right: 0; /* Position the icons to the far right */
+    margin-right: 15px; /* Optional: Add some margin from the right edge */
+    
 }
 
-.banner .icons img {
+.banner-img {
     width: 23px;
     height: 23px;
     margin: 10px;
@@ -22,16 +24,21 @@
     transition: transform 0.2s;
 }
 
-.banner .icons img:hover {
+.banner-img:hover {
     transform: scale(1.04);
+}
+
+.banner .text {
+    display: flex;
+    align-items: center;
 }
 
 .banner .text p {
     margin: 0px;
-    margin-right: 40px;
+    margin-right: 21px;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .banner .icons {
         display: none;
     }
@@ -45,4 +52,11 @@
         margin-right: 0;
         
     }
+} */
+
+.phone-info {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    /* background-color: blue; */
+    color: white;
 }

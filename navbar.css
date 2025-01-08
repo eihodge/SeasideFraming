@@ -39,8 +39,8 @@
 .website-links li {
     list-style: none;
     background-color: #00000000;
-    transition: background-color 0.2s ease;
-    padding-right: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease, text-decoration 0.2s ease;
+    padding-right: 14px;
 }
 
 .website-links li a {
@@ -51,15 +51,15 @@
 }
 
 .website-links li:hover {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    text-decoration-thickness: 3px;
-    text-decoration-color: rgb(196, 196, 196);
+    /* text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(0, 0, 0); */
+    transform: scale(1.1);
 
 }
 
 .toggle-button {
-    
     position: absolute;
     top: 0.93rem;
     right: 1rem;
@@ -134,15 +134,11 @@
         height: 58px;
         margin-top: 4px;
         margin-left: 3px;
-    }
-
-   
+    }   
 }
 
 @media (max-width: 830px) {
     .toggle-button {
         display: flex;
     }
-
-    
 }
