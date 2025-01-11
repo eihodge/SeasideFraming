@@ -10,116 +10,302 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
 
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
     <link rel="icon" type="image/png" href="/websiteIcon.png">
 
     <style>
-        body { 
-            margin: 0;
-            padding: 0;
-            background-color: rgb(243, 238, 228);
-            font-family: 'Open Sans';
-        }
+      body { 
+        margin: 0;
+        padding: 0;
+        background-color: rgb(243, 238, 228);
+        font-family: 'Open Sans';
+      }
 
-        .container-about {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      .container-about {
+        width: 90%;
+        max-width: 1250px;
+        margin: 20px auto;
+        padding: 20px;
+        margin-top: 0px;
+      }
+      h1 {
+        text-align: center;
+        color: #000000;
+        font-family: "Antic Didone";
+      }
+
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 0.66fr 1.34fr;
+        gap: 10px;
+        align-items: center; /* Center items vertically */
+      }
+
+      .about-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .container-about-body {
+        padding: 10px;
+      }
+
+      @media (max-width: 1000px) {
+        .about-content {
+          grid-template-columns: 1fr;
+          align-items: start; /* Align items to the start on smaller screens */
+        }
+      }
+
+
+
+
+
+
+
+
+        .container- {
+          width: 90%;
+          max-width: 1250px;
+          margin: 20px auto;
+          padding: 20px;  
         }
         h1 {
             text-align: center;
             color: #000000;
+            font-family: "Antic Didone";
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-item h2 {
+            font-size: 1.2em;
+            color: #000000;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .faq-item p {
+            margin: 0;
+            display: none;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-symbol {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: black; */
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+
+            padding-top: 10px;
+        }
+        .faq-symbol.open {
+            padding-top: 14px;
         }
 
 
 
 
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".faq-question");
+  items.forEach(item => {
+      item.addEventListener("click", () => {
+          const content = item.nextElementSibling;
+          const symbol = item.querySelector(".faq-symbol");
+  
+          // Close all other answers
+          document.querySelectorAll(".faq-item p").forEach(otherContent => {
+              if (otherContent !== content) {
+                  otherContent.style.display = "none";
+                  otherContent.previousElementSibling.querySelector(".faq-symbol").textContent = "▶";
+                  otherContent.previousElementSibling.querySelector(".faq-symbol").classList.remove("open");
+              }
+          });
+  
+          // Toggle the clicked answer
+          const isVisible = content.style.display === "block";
+          content.style.display = isVisible ? "none" : "block";
+          symbol.textContent = isVisible ? "▶" : "▼ ";
+          symbol.classList.toggle("open", !isVisible);
+      });
+  });
+  });
+  
+  </script>
   </head>
   <body>
-    <div class="banner">
-      <div class="icons">
-          <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
-              <img class="banner-img" src="/images/facebook.png">
-          </a>
-
+    <div class="banner-outer">
+      <div class="banner">
+        <div class="icons">
           <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
-              <img class="banner-img" src="/images/location.png">
+            <img class="banner-img" src="/images/location.png">
           </a>
 
           <a href="mailto:SeasideFraming2@gmail.com" target="_blank">
             <img class="banner-img" src="/images/mail.png">
+          </a>
+
+          <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
+            <img class="banner-img" src="/images/facebook.png">
+          </a>
+        </div>
+        <div class="text">
+            <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
+            <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
+
+            <p class="phone-info">
+              <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
+              (910) 250-1224
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-outer">
+      <nav class="navbar">
+        <div class="website-title" onclick="location.href='/'">
+          <img class="website-img" src="/images/logo2.png" alt="Seaside Framing Logo">
+        </div>
+        <a href="#" class="toggle-button" style="padding-top: 15px; padding-right: 10px;">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </a>
-      </div>
-      <div class="text">
-          <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
-          <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
-
-          <p class="phone-info">
-            <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
-            (910) 250-1224
-        </p>
-      </div>
-  </div>
-
-    <nav class="navbar">
-      <div class="website-title" onclick="location.href='/'">
-        <img class="website-img" src="/images/logo2.png" alt="Seaside Framing Logo">
-      </div>
-      <a href="#" class="toggle-button" style="padding-top: 15px; padding-right: 10px;">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="website-links">
-        <ul>
-          <li><a href="#" onclick="location.href='/'">Home</a></li>
-          <li><a href="#" onclick="location.href='/about.html'">About</a></li>
-          <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
-          <li><a href="#" onclick="location.href='/faq.html'">FAQ</a></li>
-          <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+        <div class="website-links">
+          <ul>
+            <li><a href="#" onclick="location.href='/'">Home</a></li>
+            <li><a href="#" onclick="location.href='/about.html'">About</a></li>
+            <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
+            <li><a href="#" onclick="location.href='/gallery.html'">Our Work</a></li>
+            <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <!-- End of boilerplate code -->
     <div class="container-about">
-        <h1>About Us</h1>
-        <p>
+        
+      <h1>About Us</h1>
+        
+      <div class="about-content">
+        <img src="/images/storefront4.jpg" class="about-image">
+        <div class="container-about-body">
+          <p>
             Seaside Framing, established in 2015, is proudly located in the town of Oak Island, NC. 
             Our shop specializes in professional custom framing services, offering everything from 
             glass and mat cutting to shadow boxes and three-dimensional framing.
-        </p>
-        <p>
-            What sets Seaside Framing apart is our commitment to quality and local craftsmanship. 
-            Unlike many competitors, all of our framing and customization work is done in-store by 
-            our skilled team—never outsourced to third parties. When you shop with us, you’re not 
-            only receiving high-quality, personalized service, but also supporting a local business 
-            rather than a large chain or box company.
-        </p>
-        <p>
-            We take pride in preserving and showcasing your treasured items with the utmost care and 
-            attention to detail. Whether it’s artwork, memorabilia, textiles, or oversized pieces, 
-            Seaside Framing is here to bring your vision to life.
-        </p>
-
-
-        <div>
-          <h1>Credits</h1>
-          <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Gregor Cresnar - Flaticon</a>
-          <br>
-          <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Hight Quality Icons - Flaticon</a>
-          <br>
-          <a href="https://www.flaticon.com/free-icons/pin" title="pin icons">Pin icons created by Freepik - Flaticon</a>
-          <br>
-          <a href="https://www.flaticon.com/free-icons/mail" title="mail icons">Mail icons created by Freepik - Flaticon</a>
-          
+          </p>
+          <p>
+              What sets Seaside Framing apart is our commitment to quality and local craftsmanship. 
+              Unlike many competitors, all of our framing and customization work is done in-store by 
+              our skilled team—never outsourced to third parties and never leaving the store. When you shop with us, you’re not 
+              only receiving high-quality, personalized service, but also supporting a local business 
+              rather than a large chain or box company.
+          </p>
+          <p>
+              We take pride in preserving and showcasing your treasured items with the utmost care and 
+              attention to detail. Whether it’s artwork, memorabilia, textiles, or oversized pieces, 
+              Seaside Framing is here to bring your vision to life.
+          </p>
         </div>
+      </div>
+
+      <!-- FAQ section -->
+      <div class="container-faq">
+        <h1>FAQ</h1>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="faq-symbol">▶</div>
+                <h2>How long does it typically take to complete a custom framing project?</h2>
+            </div>
+            <p>Custom framing projects typically take 1-3 weeks. We strive to complete each project as quickly as possible without compromising on quality. We also offer rush order options if needed.</p>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="faq-symbol">▶</div>
+                <h2>Should I walk in or make an appointment?</h2>
+            </div>
+            <p>No appointment is needed—walk-ins are welcome during business hours.</p>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="faq-symbol">▶</div>
+                <h2>What payment methods do you accept?</h2>
+            </div>
+            <p>We accept cash, checks, and credit cards.</p>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="faq-symbol">▶</div>
+                <h2>Do you offer returns or refunds?</h2>
+            </div>
+            <p>All sales are final, and we do not offer returns or refunds. If you have any concerns about your order, we encourage you to discuss them with us during the design process so we can ensure the final product meets your expectations.</p>
+        </div>
+    
+        
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="faq-symbol">▶</div>
+                <h2>Do you offer glass replacement for broken frames?</h2>
+            </div>
+            <p>Yes, we offer glass replacement services for broken or damaged frames. Bring in your frame, and we’ll help you choose the best glass option.</p>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="faq-symbol">▶</div>
+                <h2>Can I bring in my own frame for you to use?</h2>
+            </div>
+            <p>Yes, customers can bring in their own frames for custom matting or assembly.</p>
+        </div>
+    
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <div class="faq-symbol">▶</div>
+                <h2>Are there any special discounts available?</h2>
+            </div>
+            <p>We offer a 10% discount for framing an artist's own work or a local artist's work, as part of our commitment to supporting the local art community. This discount is available year-round and is a great way for artists to showcase their creations in a professional, custom frame. If you're a local artist or framing your own artwork, simply let us know during your visit to take advantage of this offer.</p>
+        </div>
+      </div>
+
+
+      <!-- Attributions section -->
+      <div>
+        <h1>Credits</h1>
+        <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Gregor Cresnar - Flaticon</a>
+        <br>
+        <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Hight Quality Icons - Flaticon</a>
+        <br>
+        <a href="https://www.flaticon.com/free-icons/pin" title="pin icons">Pin icons created by Freepik - Flaticon</a>
+        <br>
+        <a href="https://www.flaticon.com/free-icons/mail" title="mail icons">Mail icons created by Freepik - Flaticon</a>
+        
+      </div>
     </div>
 
 
@@ -130,9 +316,9 @@
       <div class="dark-gray-container">
         <div class="half-width" >
           <div class="inner-half-width" >
-            <h3 style="font-weight: 400; padding-bottom: 23px;">PLAN YOUR VISIT</h3>
+            <h3 style="font-weight: 400; padding-bottom: 7px;">PLAN YOUR VISIT</h3>
       
-            <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 10am-4pm</p>
+            <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 11am-4pm</p>
             <p style="margin-bottom: -12px;">Telephone: (910) 250-1224</p>
             <p>Email: <a href="mailto:SeasideFraming2@gmail.com" target="_blank" class="light-gray-link" target="_blank" class="light-gray-link">SeasideFraming2@gmail.com</a></p>
           </div>
@@ -149,7 +335,7 @@
       
         <div class="half-width" >
           <div class="inner-half-width" >
-            <h3 style="font-weight: 400; padding-bottom: 23px;">CONNECT WITH US</h3>
+            <h3 style="font-weight: 400; padding-bottom: 7px;">CONNECT WITH US</h3>
       
             <p style="margin-bottom: -12px;">6012 E Oak Island Dr.            </p>
             <p style="margin-bottom: -12px;">Oak Island, NC 28465</p>

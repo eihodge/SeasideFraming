@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="bottombar.css">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+
+    <title>Seaside Framing</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(243, 238, 228);
+            font-family: 'Open Sans';
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            
+        }
+        .gallery img:hover {
+            cursor: pointer;
+            
+        }
+
+        @media (min-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (min-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            display: none;
+            z-index: 1000;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .header-content {
+            max-width: 1250px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #hello-text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="banner-outer">
+        <div class="banner">
+          <div class="icons">
+            <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
+              <img class="banner-img" src="/images/location.png">
+            </a>
+  
+            <a href="mailto:SeasideFraming2@gmail.com" target="_blank">
+              <img class="banner-img" src="/images/mail.png">
+            </a>
+  
+            <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
+              <img class="banner-img" src="/images/facebook.png">
+            </a>
+          </div>
+          <div class="text">
+              <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
+              <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
+  
+              <p class="phone-info">
+                <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
+                (910) 250-1224
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="navbar-outer">
+    <nav class="navbar">
+        <div class="website-title" onclick="location.href='/'">
+        <img class="website-img" src="/images/logo2.png" alt="Seaside Framing Logo">
+        </div>
+        <a href="#" class="toggle-button" style="padding-top: 15px; padding-right: 10px;">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </a>
+        <div class="website-links">
+        <ul>
+            <li><a href="#" onclick="location.href='/'">Home</a></li>
+            <li><a href="#" onclick="location.href='/about.html'">About</a></li>
+            <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
+            <li><a href="#" onclick="location.href='/gallery.html'">Our Work</a></li>
+            <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+    </div>
+
+
+    <div class="header-content">
+        <h1 style="font-family: Antic Didone">Our Framing Portfolio</h1>
+        <p>Browse our gallery of custom framing projects, showcasing the care and attention to detail we bring to every piece. Click an image to view it in full size.</p>
+    </div>
+    
+    
+    
+    <div class="container">
+        <div class="gallery">
+            <img src="images/example4.jpeg" alt="Frames">
+            <img src="images/example2.jpeg" alt="Frames">
+            <img src="images/example3.jpeg" alt="Frames">
+            <img src="images/example1.jpeg" alt="Frames">
+            <img src="images/example5.jpeg" alt="Frames">
+            <img src="images/example6.jpeg" alt="Frames">
+            
+            <img src="images/matcutting.jpeg" alt="Frames">
+            
+            <img src="images/example13.png" alt="Frames">
+            <img src="images/shadowbox.jpeg" alt="Frames">
+            <img src="images/example7.jpg" alt="Frames">
+            <img src="images/example8.jpg" alt="Frames">
+            <img src="images/example9.png" alt="Frames">
+            <img src="images/example10.jpeg" alt="Frames">
+            <img src="images/example11.png" alt="Frames">
+            <img src="images/example12.png" alt="Frames">
+            <img src="images/example15.jpeg" alt="Frames">
+            <img src="images/example16.jpeg" alt="Frames">
+            
+            
+        </div>
+    </div>
+    <div id="overlay" class="overlay">
+        <div id="hello-text" style="position: absolute; top: 8px; right: 30px; color: white; font-size: 60px;">×</div>
+
+        <img id="overlay-img" src="" alt="Enlarged Image">
+    </div>
+
+        <!-- New dark gray container -->
+        <div class="dark-gray-container-outer" style="margin-top: 40px;">
+            <div class="dark-gray-container">
+              <div class="half-width" >
+                <div class="inner-half-width" >
+                  <h3 style="font-weight: 400; padding-bottom: 7px;">PLAN YOUR VISIT</h3>
+            
+                  <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 11am-4pm</p>
+                  <p style="margin-bottom: -12px;">Telephone: (910) 250-1224</p>
+                  <p>Email: <a href="mailto:SeasideFraming2@gmail.com" target="_blank" class="light-gray-link" target="_blank" class="light-gray-link">SeasideFraming2@gmail.com</a></p>
+                </div>
+              </div>
+            
+              <div class="half-width" >
+                <div class="inner-half-width" >
+                  <img src="/images/logo1.png" class="logo-bottom">
+            
+                  <p style="margin-bottom: -12px; font-size: 10px; color: rgb(164, 164, 164); text-align: center;">© 2025 Seaside Framing & Gallery NC</p>
+            
+                </div>
+              </div>
+            
+              <div class="half-width" >
+                <div class="inner-half-width" >
+                  <h3 style="font-weight: 400; padding-bottom: 7px;">CONNECT WITH US</h3>
+            
+                  <p style="margin-bottom: -12px;">6012 E Oak Island Dr.            </p>
+                  <p style="margin-bottom: -12px;">Oak Island, NC 28465</p>
+                  <p><a href="https://www.google.com/maps/dir//Seaside+Framing+%26+Gallery,+6012+E+Oak+Island+Dr,+Oak+Island,+NC+28465/@33.9123106,-78.1034681,815m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x8900a94d66cd3de5:0xf46300bdb5356bd6!2m2!1d-78.1034677!2d33.9123121!3e0?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="light-gray-link">Directions</a></p>
+                </div>
+              </div>
+            
+                
+              </div>
+            
+            </div></div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.gallery img');
+            const overlay = document.getElementById('overlay');
+            const overlayImg = document.getElementById('overlay-img');
+
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    overlayImg.src = image.src;
+                    overlay.style.display = 'flex';
+                });
+            });
+
+            overlay.addEventListener('click', () => {
+                overlay.style.display = 'none';
+            });
+
+
+            
+        });
+    </script>
+</body>
+</html>

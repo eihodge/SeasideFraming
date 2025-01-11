@@ -21,10 +21,10 @@
 
     <style>
       body { 
-          margin: 0;
-          padding: 0;
-          background-color: rgb(243, 238, 228);
-          font-family: 'Open Sans';
+        margin: 0;
+        padding: 0;
+        background-color: rgb(243, 238, 228);
+        font-family: 'Open Sans';
       }
 
       .intro-container {
@@ -42,50 +42,54 @@
     </style>
   </head>
   <body>
-    <div class="banner">
-      <div class="icons">
-          <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
-              <img class="banner-img" src="/images/facebook.png">
-          </a>
-
+    <div class="banner-outer">
+      <div class="banner">
+        <div class="icons">
           <a href="https://www.google.com/maps/place/Seaside+Framing+%26+Gallery/data=!4m2!3m1!1s0x0:0xf46300bdb5356bd6?sa=X&ved=1t:2428&ictx=111" target="_blank">
-              <img class="banner-img" src="/images/location.png">
+            <img class="banner-img" src="/images/location.png">
           </a>
 
           <a href="mailto:SeasideFraming2@gmail.com" target="_blank">
             <img class="banner-img" src="/images/mail.png">
-        </a>
-      </div>
-      <div class="text">
-          <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
-          <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
+          </a>
 
-          <p class="phone-info">
-            <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
-            (910) 250-1224
-        </p>
+          <a href="https://www.facebook.com/seasideframingandgallery/" target="_blank">
+            <img class="banner-img" src="/images/facebook.png">
+          </a>
+        </div>
+        <div class="text">
+            <!-- <p>6012 E Oak Island Dr, Oak Island, NC 28465</p>
+            <p>(910) 250-1224 | SeasideFraming2@gmail.com</p> -->
+
+            <p class="phone-info">
+              <img src="/images/telephone.png" class="banner-img" alt="Telephone Icon">
+              (910) 250-1224
+          </p>
+        </div>
       </div>
     </div>
 
-    <nav class="navbar">
-      <div class="website-title" onclick="location.href='/'">
-        <img class="website-img" src="/images/logo2.png" alt="Seaside Framing Logo">
-      </div>
-      <a href="#" class="toggle-button" style="padding-top: 15px; padding-right: 10px;">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="website-links">
-        <ul>
-          <li><a href="#" onclick="location.href='/'">Home</a></li>
-          <li><a href="#" onclick="location.href='/about.html'">About</a></li>
-          <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
-          <li><a href="#" onclick="location.href='/faq.html'">FAQ</a></li>
-          <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="navbar-outer">
+      <nav class="navbar">
+        <div class="website-title" onclick="location.href='/'">
+          <img class="website-img" src="/images/logo2.png" alt="Seaside Framing Logo">
+        </div>
+        <a href="#" class="toggle-button" style="padding-top: 15px; padding-right: 10px;">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="website-links">
+          <ul>
+            <li><a href="#" onclick="location.href='/'">Home</a></li>
+            <li><a href="#" onclick="location.href='/about.html'">About</a></li>
+            <li><a href="#" onclick="location.href='/services.html'">Services</a></li>
+            <li><a href="#" onclick="location.href='/gallery.html'">Our Work</a></li>
+            <li><a href="#" onclick="location.href='/contact.html'">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
    <!-- End of boilerplate code -->
 
@@ -93,7 +97,7 @@
    <div class="slider-container">
         <div class="slides" id="slides">
           <div class="slide">
-            <img src="/images/frames.jpeg" alt="Frame">
+            <img src="/images/frames1.jpeg" alt="Frame">
             <div class="caption">
               <h1 style="">Expert Custom Framing Since 2015</h1>
               <p>Showcasing your treasured items with care and precision for over a decade.</p>
@@ -107,14 +111,14 @@
             </div>
           </div>
           <div class="slide">
-            <img src="/images/framedart.jpg" alt="Shadow Box">
+            <img src="/images/storefront.jpeg" alt="Shadow Box">
             <div class="caption">
               <h1>Custom Framing for 2D and 3D Masterpieces</h1> 
               <p>From artwork to memorabilia, our frames and shadow boxes bring your vision to life.</p> 
             </div>
           </div>
           <div class="slide">
-            <img src="/images/matcutting.jpeg" alt="Mat Cutting">
+            <img src="/images/storefront.jpeg" alt="Mat Cutting">
             <div class="caption">
               <h1>Precision Glass and Mat Cutting</h1> 
               <p>Enhancing every piece with professional-grade materials and expert techniques.</p> 
@@ -147,11 +151,11 @@
     <!-- SERVICES -->
     <div class="services-container" style="margin-bottom: 15px;">
       <a href="services.html" class="service-box">
-        <img src="/images/frames.jpeg" alt="Professional Custom Framing">
+        <img src="/images/frames-square.jpeg" alt="Professional Custom Framing">
         <div class="service-text">Professional Custom Framing</div>
       </a>
       <a href="services.html" class="service-box">
-        <img src="/images/glass.png" alt="Glass Cutting">
+        <img src="/images/glass.webp" alt="Glass Cutting">
         <div class="service-text">Glass Cutting</div>
       </a>
       <a href="services.html" class="service-box">
@@ -171,9 +175,9 @@
 <div class="dark-gray-container">
   <div class="half-width" >
     <div class="inner-half-width" >
-      <h3 style="font-weight: 400; padding-bottom: 23px;">PLAN YOUR VISIT</h3>
+      <h3 style="font-weight: 400; padding-bottom: 7px;">PLAN YOUR VISIT</h3>
 
-      <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 10am-4pm</p>
+      <p style="margin-bottom: -12px;">Hours: Tuesday-Friday, 11am-4pm</p>
       <p style="margin-bottom: -12px;">Telephone: (910) 250-1224</p>
       <p>Email: <a href="mailto:SeasideFraming2@gmail.com" target="_blank" class="light-gray-link" target="_blank" class="light-gray-link">SeasideFraming2@gmail.com</a></p>
     </div>
@@ -190,7 +194,7 @@
 
   <div class="half-width" >
     <div class="inner-half-width" >
-      <h3 style="font-weight: 400; padding-bottom: 23px;">CONNECT WITH US</h3>
+      <h3 style="font-weight: 400; padding-bottom: 7px;">CONNECT WITH US</h3>
 
       <p style="margin-bottom: -12px;">6012 E Oak Island Dr.            </p>
       <p style="margin-bottom: -12px;">Oak Island, NC 28465</p>
