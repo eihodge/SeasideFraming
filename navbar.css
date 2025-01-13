@@ -26,9 +26,10 @@
 }
 
 .website-img {
-    height: 65px;
-    margin-top: 1px;
-    margin-left: 3px;
+    height: 73px;
+    margin-top: -4px;
+    margin-left: 2px;
+
 }
 
 .website-links {
@@ -138,9 +139,9 @@
     }
 
     .website-img {
-        height: 58px;
-        margin-top: 4px;
-        margin-left: 3px;
+        height: 65px;
+        margin-top: -1px;
+        margin-left: 2px;
     }   
 }
 
