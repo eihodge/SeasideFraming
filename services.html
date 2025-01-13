@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="banner.css">
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="bottombar.css">
-    <link rel="stylesheet" href="services.css">
-    <link rel="stylesheet" href="imageslider.css">
-    <script src="imageslider.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -27,17 +24,45 @@
         font-family: 'Open Sans';
       }
 
-      .intro-container {
-        max-width: 1250px;
+      h1 {
         text-align: center;
-        margin: 0 auto;
+        color: #000000;
+        font-family: "Antic Didone";
+        font-size: 30px;
+        padding-top: 7px;
+      }
+      h3 {
+        font-family: "Antic Didone";
+        font-size: 23px;
       }
 
-      
 
-      
+    #services {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 1250px;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10px;
+        
+    }
+    .service {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .service-image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .service-text {
+        flex: 1;
+    }
 
-      
+
+
 
     </style>
   </head>
@@ -93,84 +118,52 @@
 
    <!-- End of boilerplate code -->
 
-   <!-- SLIDING IMAGES -->
-   <div class="slider-container">
-        <div class="slides" id="slides">
-          <div class="slide">
-            <img src="/images/frames1.jpeg" alt="Frame">
-            <div class="caption">
-              <h1 style="">Expert Custom Framing Since 2015</h1>
-              <p>Showcasing your treasured items with care and precision for over a decade.</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="/images/storefront.jpeg" alt="Custom Frame">
-            <div class="caption">
-              <h1 style="">Locally Owned and Operated</h1> 
-              <p>All framing work is done in-store, providing unmatched quality and a personal touch for our Oak Island community.</p> 
-            </div>
-          </div>
-          <div class="slide">
-            <img src="/images/framedart1.jpg" alt="Shadow Box">
-            <div class="caption">
-              <h1>Custom Framing for 2D and 3D Masterpieces</h1> 
-              <p>From artwork to memorabilia, our frames and shadow boxes bring your vision to life.</p> 
-            </div>
-          </div>
-          <div class="slide">
-            <img src="/images/option3.jpg" alt="Mat Cutting">
-            <div class="caption">
-              <h1>Precision Glass and Mat Cutting</h1> 
-              <p>Enhancing every piece with professional-grade materials and expert techniques.</p> 
-            </div>
-          </div>
-        </div>
-        <button class="arrow left" id="prev">&#8249;</button>
-        <button class="arrow right" id="next">&#8250;</button>
-    </div>
 
-    <!-- INTRO -->
-    <div class="intro-container" style="margin-bottom: 30px;  width: 85vw;">
-      <h1 style="font-family: Antic Didone;">Our Mission</h1>
-      <p>
-        At Seaside Framing, we bring over a decade of experience and a commitment to quality to every project. All our framing work is done in-store, ensuring exceptional results tailored to your needs. As a locally owned business, we take pride in offering personalized service, competitive pricing, and a welcoming atmosphere for all our customers.
-      </p>
-      <p>
-        A custom frame can transform your cherished items into stunning focal points for your home. By choosing Seaside Framing, you’re not only enhancing your space but also supporting a small, local business dedicated to the Oak Island community.
-      </p>
-      <p>
-        Contact us today to get started on a custom frame designed just for you!
-      </p>
 
-      <a href="contact.html">
-        <button class="fancy-button">Contact Us</button>
-      </a>
-    </div>
+
+    <!-- Replace this comment with your implementation -->
 
     
-    <!-- SERVICES -->
-    <div class="services-container" style="margin-bottom: 15px;">
-      <a href="services.html#service1" class="service-box">
-        <img src="/images/frames-square.jpeg" alt="Professional Custom Framing">
-        <div class="service-text">Professional Custom Framing</div>
-      </a>
-      <a href="services.html#service2" class="service-box">
-        <img src="/images/glass.webp" alt="Glass Cutting">
-        <div class="service-text">Glass Cutting</div>
-      </a>
-      <a href="services.html#service3" class="service-box">
-        <img src="/images/example3.jpeg" alt="Mat Boards">
-        <div class="service-text">Mat Boards</div>
-      </a>
-      <a href="services.html#service4" class="service-box">
-        <img src="/images/shadowbox.jpeg" alt="Shadow Boxes">
-        <div class="service-text">Shadow Boxes</div>
-      </a>
-    </div>
+    <section id="services">
+        <h1>Our Services</h1>
+        <div class="service" id="service1">
+            <img src="images/framedart1.jpg" alt="Professional Custom Framing" class="service-image">
+            <div class="service-text">
+                <h3>Professional Custom Framing</h3>
+                <p>We offer professional custom framing for artwork, photographs, memorabilia, textiles, mirrors, and more. We also specialize in framing three-dimensional items like jerseys and memorabilia.</p>
+            </div>
+        </div>
+        
+        
+        <div class="service" id="service2">
+            <img src="images/glassoptions.jpeg" alt="Glass Cutting" class="service-image">
+            <div class="service-text">
+                <h3>Glass Cutting</h3>
+                <p>We provide glass cutting services, including glass replacement for damaged frames. Please note that these services are not free and will incur a cost.</p>
+            </div>
+        </div>
+        <div class="service" id="service3">
+            <img src="images/example3.jpeg" alt="Mat Boards" class="service-image">
+            <div class="service-text">
+                <h3>Mat Boards</h3>
+                <p>We offer mat cutting services using acid-free materials to ensure the longevity and preservation of your items.</p>
+            </div>
+        </div>
+        <div class="service" id="service4">
+            <img src="images/shadowbox.jpeg" alt="Shadow Boxes" class="service-image">
+            <div class="service-text">
+                <h3>Shadow Boxes</h3>
+                <p>We create custom shadow boxes to display and protect your cherished items.</p>
+            </div>
+        </div>
+    </section>
 
 
 
-    <!-- New dark gray container -->
+
+
+
+    <!-- Bottom bar (keep at bottom of html) -->
 <div class="dark-gray-container-outer" style="margin-top: 40px;">
 <div class="dark-gray-container">
   <div class="half-width" >
@@ -207,10 +200,5 @@
 
 </div></div>
 
-
-    
-    
-
-    
   </body>
 </html>
