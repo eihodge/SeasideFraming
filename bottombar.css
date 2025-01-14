@@ -35,11 +35,13 @@
     }
     .half-width {
       padding: 15px;
+      justify-content: center;
     }
 
     .inner-half-width {
     width: 300px;
     /* background-color: red; */
+    text-align: center;
   }
   }
 
